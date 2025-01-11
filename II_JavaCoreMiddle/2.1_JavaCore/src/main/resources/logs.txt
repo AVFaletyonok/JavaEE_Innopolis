@@ -1,0 +1,19 @@
+2025-01-08T06:53:07.529824102
+Figures:
+Ellipses:
+[Ellipse{radiusX=10.0, radiusY=20.0, centerX=10.0, centerY=10.0}, Ellipse{radiusX=15.0, radiusY=10.0, centerX=11.0, centerY=11.0}]
+Circles:
+[Circle{radiusX=5.0, radiusY=5.0, centerX=20.0, centerY=20.0}, Circle{radiusX=15.0, radiusY=15.0, centerX=21.0, centerY=21.0}]
+Rectangles:
+[Rectangle{sideA=3.0, sideB=4.0, centerX=30.0, centerY=30.0}, Rectangle{sideA=5.0, sideB=7.0, centerX=31.0, centerY=31.0}]
+Squares:
+[Square{sideA=6.0, sideB=6.0, centerX=40.0, centerY=40.0}, Square{sideA=4.0, sideB=4.0, centerX=41.0, centerY=41.0}]
+Circle before moving : Circle{radiusX=5.0, radiusY=5.0, centerX=20.0, centerY=20.0}
+Circle after moving to the center of a grid : Circle{radiusX=5.0, radiusY=5.0, centerX=0.0, centerY=0.0}
+Circle before moving : Circle{radiusX=15.0, radiusY=15.0, centerX=21.0, centerY=21.0}
+Circle after moving to the center of a grid : Circle{radiusX=15.0, radiusY=15.0, centerX=0.0, centerY=0.0}
+Square before moving : Square{sideA=6.0, sideB=6.0, centerX=40.0, centerY=40.0}
+Square after moving to the center of a grid : Square{sideA=6.0, sideB=6.0, centerX=0.0, centerY=0.0}
+Square before moving : Square{sideA=4.0, sideB=4.0, centerX=41.0, centerY=41.0}
+Square after moving to the center of a grid : Square{sideA=4.0, sideB=4.0, centerX=0.0, centerY=0.0}
+--------------------
