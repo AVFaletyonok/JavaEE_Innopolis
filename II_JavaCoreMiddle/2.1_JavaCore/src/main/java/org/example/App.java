@@ -2,6 +2,11 @@ package org.example;
 
 import com.fasterxml.jackson.databind.DeserializationFeature;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import org.example.figures.Circle;
+import org.example.figures.Ellipse;
+import org.example.figures.Rectangle;
+import org.example.figures.Square;
+import org.example.utils.FiguresMap;
 
 import java.io.File;
 import java.io.FileWriter;
@@ -14,7 +19,7 @@ public class App
     private static FiguresMap figuresMap = new FiguresMap();
 
     public static void main( String[] args ) {
-        JsonFileToPojo("II_JavaCoreMiddle/2.1_JavaCore/src/main/resources/figures_set.json");
+        jsonFileToPojo("II_JavaCoreMiddle/2.1_JavaCore/src/main/resources/figures_set.json");
 
         try(FileWriter writer = new FileWriter(
                 "II_JavaCoreMiddle/2.1_JavaCore/src/main/resources/logs.txt", true)) {
@@ -33,14 +38,14 @@ public class App
             for(Circle circle : figuresMap.getCircles()) {
                 writer.write("Circle before moving : ");
                 writer.write(circle.toString() + "\n");
-                circle.ChangePosition(0.0, 0.0);
+                circle.changePosition(0.0, 0.0);
                 writer.write("Circle after moving to the center of a grid : ");
                 writer.write(circle.toString() + "\n");
             }
             for(Square square : figuresMap.getSquares()) {
                 writer.write("Square before moving : ");
                 writer.write(square.toString() + "\n");
-                square.ChangePosition(0.0, 0.0);
+                square.changePosition(0.0, 0.0);
                 writer.write("Square after moving to the center of a grid : ");
                 writer.write(square.toString() + "\n");
             }
@@ -52,7 +57,7 @@ public class App
         }
     }
 
-    private static void JsonFileToPojo(String filePath) {
+    private static void jsonFileToPojo(String filePath) {
         File file = new File(filePath);
         boolean isExistFile = false;
         if (!filePath.isBlank()) isExistFile = file.exists();
@@ -69,7 +74,7 @@ public class App
         }
     }
 
-    private static void FillFiguresSet() {
+    private static void fillFiguresSet() {
         figuresMap.addEllipse(new Ellipse(10.0, 10.0, 10.0, 20.0));
         figuresMap.addEllipse(new Ellipse(11.0, 11.0, 15.0, 10.0));
         figuresMap.addCircle(new Circle(20.0, 20.0, 5.0));

@@ -1,9 +1,13 @@
-package org.example;
+package org.example.utils;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import org.example.figures.Circle;
+import org.example.figures.Ellipse;
+import org.example.figures.Rectangle;
+import org.example.figures.Square;
 
 import java.util.ArrayList;
 import java.util.List;

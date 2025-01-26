@@ -1,6 +1,7 @@
-package org.example;
+package org.example.figures;
 
 import lombok.*;
+import org.example.interfaces.IMovable;
 
 @NoArgsConstructor
 @Setter
@@ -14,13 +15,13 @@ public class Square extends Rectangle implements IMovable {
     }
 
     @Override
-    public void Move(double deltaX, double deltaY) {
+    public void move(double deltaX, double deltaY) {
         centerX += deltaX;
         centerY += deltaY;
     }
 
     @Override
-    public void ChangePosition(double X, double Y) {
+    public void changePosition(double X, double Y) {
         centerX = X;
         centerY = Y;
     }
