@@ -17,13 +17,13 @@ public class App
 
     public static void main( String[] args )
     {
-        FileToIntegersList(LIST_INPUT_FILE_PATH);
-        ListPractise(LOGS_FILE_PATH);
-        FileToStringHashSet(HASHSET_INPUT_FILE_PATH);
-        SetPractise(LOGS_FILE_PATH);
+        fileToIntegersList(LIST_INPUT_FILE_PATH);
+        listPractise(LOGS_FILE_PATH);
+        fileToStringHashSet(HASHSET_INPUT_FILE_PATH);
+        setPractise(LOGS_FILE_PATH);
     }
 
-    private static void ListPractise(String logsFilePath) {
+    private static void listPractise(String logsFilePath) {
         try(FileWriter writer = new FileWriter(logsFilePath, true)) {
             LocalDateTime currentDateTime = LocalDateTime.now();
             writer.write(currentDateTime.toString() + "\n");
@@ -69,7 +69,7 @@ public class App
         }
     }
 
-    private static void SetPractise(String logsFilePath) {
+    private static void setPractise(String logsFilePath) {
         try(FileWriter writer = new FileWriter(logsFilePath, true)) {
             LocalDateTime currentDateTime = LocalDateTime.now();
             writer.write(currentDateTime.toString() + "\n");
@@ -111,7 +111,7 @@ public class App
         }
     }
 
-    private static void FileToIntegersList(String filePath) {
+    private static void fileToIntegersList(String filePath) {
         File file = new File(filePath);
         boolean isExistFile = false;
         if (!filePath.isBlank()) isExistFile = file.exists();
@@ -136,7 +136,7 @@ public class App
         }
     }
 
-    private static void FileToStringHashSet(String filePath) {
+    private static void fileToStringHashSet(String filePath) {
         File file = new File(filePath);
         boolean isExistFile = false;
         if (!filePath.isBlank()) isExistFile = file.exists();
