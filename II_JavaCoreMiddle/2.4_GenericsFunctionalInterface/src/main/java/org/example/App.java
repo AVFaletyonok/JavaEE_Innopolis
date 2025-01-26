@@ -22,8 +22,8 @@ public class App
 
     public static void main( String[] args )
     {
-//        FillStringListInput(INPUT_FILE_PATH);
-        List<String> stringList = JsonFileToStringList(INPUT_FILE_PATH);
+//        fillStringListInput(INPUT_FILE_PATH);
+        List<String> stringList = jsonFileToStringList(INPUT_FILE_PATH);
 
         Predicate<Object> condition = Objects::isNull;
         Function<Object, Integer> ifTrue = obj -> 0;
@@ -60,7 +60,7 @@ public class App
         return someString -> predicate.test(someString) ? ifTrue.apply(someString) : ifFalse.apply((CharSequence) someString);
     }
 
-    private static List<String> JsonFileToStringList(String filePath) {
+    private static List<String> jsonFileToStringList(String filePath) {
         File file = new File(filePath);
         boolean isExistFile = false;
         if (!filePath.isBlank()) isExistFile = file.exists();
@@ -80,7 +80,7 @@ public class App
         return null;
     }
 
-    private static void FillStringListInput(String filePath) {
+    private static void fillStringListInput(String filePath) {
         List<String> stringList = List.of("Hi", "Piece", "World");
         try {
             objectMapper.writeValue(new File(filePath), stringList);
