@@ -113,12 +113,6 @@ public class App
 
     private static void fileToIntegersList(String filePath) {
         File file = new File(filePath);
-        boolean isExistFile = false;
-        if (!filePath.isBlank()) isExistFile = file.exists();
-        if (!isExistFile) {
-            System.out.println("The input file doesn't exist : " + filePath);
-            System.exit(1);
-        }
 
         try(BufferedReader reader = new BufferedReader(new FileReader(filePath)))
         {
@@ -138,12 +132,6 @@ public class App
 
     private static void fileToStringHashSet(String filePath) {
         File file = new File(filePath);
-        boolean isExistFile = false;
-        if (!filePath.isBlank()) isExistFile = file.exists();
-        if (!isExistFile) {
-            System.out.println("The input file doesn't exist : " + filePath);
-            System.exit(1);
-        }
 
         try(BufferedReader reader = new BufferedReader(new FileReader(filePath)))
         {
