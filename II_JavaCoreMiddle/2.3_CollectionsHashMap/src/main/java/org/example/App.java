@@ -19,12 +19,12 @@ public class App
 
     public static void main( String[] args )
     {
-        FillHashMapInput(MAP_INPUT_FILE_PATH);
-        JsonFileToHashMap(MAP_INPUT_FILE_PATH);
-        MapPractise(LOGS_FILE_PATH);
+        fillHashMapInput(MAP_INPUT_FILE_PATH);
+        jsonFileToHashMap(MAP_INPUT_FILE_PATH);
+        mapPractise(LOGS_FILE_PATH);
     }
 
-    private static void MapPractise(String logsFilePath) {
+    private static void mapPractise(String logsFilePath) {
         try(FileWriter writer = new FileWriter(logsFilePath, true)) {
             LocalDateTime currentDateTime = LocalDateTime.now();
             writer.write(currentDateTime.toString() + "\n");
@@ -72,14 +72,9 @@ public class App
         }
     }
 
-    private static void JsonFileToHashMap(String filePath) {
+    private static void jsonFileToHashMap(String filePath) {
         File file = new File(filePath);
-        boolean isExistFile = false;
-        if (!filePath.isBlank()) isExistFile = file.exists();
-        if (!isExistFile) {
-            System.out.println("The input file doesn't exist : " + filePath);
-            System.exit(1);
-        }
+
         objectMapper.configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false);
         try {
             TypeReference<HashMap<String, String>> typeRef
@@ -87,11 +82,10 @@ public class App
             mapEnRuWords = objectMapper.readValue(file, typeRef);
         } catch (Exception e) {
             System.out.println("An error while reading file : " + e.getMessage());
-            System.exit(2);
         }
     }
 
-    private static void FillHashMapInput(String filePath) {
+    private static void fillHashMapInput(String filePath) {
         Map<String, String> hashMapInput = new HashMap<>();
         hashMapInput.put("Spring", "Весна");
         hashMapInput.put("Summer", "Лето");
