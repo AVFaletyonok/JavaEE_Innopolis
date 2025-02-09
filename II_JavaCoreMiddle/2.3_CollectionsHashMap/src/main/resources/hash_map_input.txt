@@ -1,0 +1,1 @@
+{"Friendship":"Дружба","Autumn":"Осень","Winter":"Зима","Melody":"Мелодия","Life":"Жизнь","Summer":"Лето","Spring":"Весна","Smile":"Улыбка","Freedom":"Свобода","Destiny":"Судьба"}
