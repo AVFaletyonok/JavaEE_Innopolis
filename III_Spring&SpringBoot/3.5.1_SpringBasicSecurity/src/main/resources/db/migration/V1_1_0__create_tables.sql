@@ -1,0 +1,13 @@
+--CREATE TABLE IF NOT EXISTS authorities
+--(
+--    "username" varchar,
+--    "authority" varchar
+--);
+--
+--CREATE TABLE IF NOT EXISTS users
+--(
+--    "username" varchar,
+--    "password" varchar,
+--    "enabled" varchar,
+--    "priority" integer
+--);
