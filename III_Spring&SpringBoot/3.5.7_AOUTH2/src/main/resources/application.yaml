@@ -1,0 +1,28 @@
+spring:
+  security:
+    oauth2:
+      client:
+        registration:
+          google:
+            client-name: Google
+            client-id: 804406015072-a29ogdcg4eica17f3otees0g4nbc246.apps.googleusercontent.com
+            client-secret: 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
+            scope: email, profile, openid
+            user-name-attribute: email
+          yandex:
+            provider: yandex
+            clientId: <your_yandex_client_id>
+            clientSecret: <your_yandex_client_secret>
+            redirect-uri: http://localhost:7777/login/oauth2/code/yandex
+            authorizationGrantType: authorization_code
+            clientName: Yandex
+          provider:
+            vk:
+              authorization-uri: https://oauth.mail.ru/login
+              token-uri: https://oauth.mail.ru/token
+              user-info-uri: https://oauth.mail.ru/userinfo
+            yandex:
+              authorization-uri: https://oauth.yandex.ru/authorize
+              token-uri: https://oauth.yandex.ru/token
+#              user-name-attribute: default_email
+              userInfoUri: https://login.yandex.ru/info
