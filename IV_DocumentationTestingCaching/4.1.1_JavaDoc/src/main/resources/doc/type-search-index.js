@@ -1,0 +1,1 @@
+typeSearchIndex = [{"l":"All Classes and Interfaces","u":"allclasses-index.html"},{"p":"org.example.initializer","l":"DataInitializer"},{"p":"org.example","l":"Main"},{"p":"org.example.config","l":"SecurityConfig"},{"p":"org.example.entity","l":"Task"},{"p":"org.example.controller","l":"TaskController"},{"p":"org.example.repository","l":"TaskRepository"}];updateSearchResults();
