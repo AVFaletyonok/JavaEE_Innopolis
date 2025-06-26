@@ -1,0 +1,6 @@
+org.example
+org.example.config
+org.example.controller
+org.example.entity
+org.example.initializer
+org.example.repository

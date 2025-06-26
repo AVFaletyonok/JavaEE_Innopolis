@@ -1,0 +1,1 @@
+packageSearchIndex = [{"l":"All Packages","u":"allpackages-index.html"},{"l":"org.example"},{"l":"org.example.config"},{"l":"org.example.controller"},{"l":"org.example.entity"},{"l":"org.example.initializer"},{"l":"org.example.repository"}];updateSearchResults();
