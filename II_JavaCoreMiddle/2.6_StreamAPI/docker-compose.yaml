@@ -1,0 +1,11 @@
+services:
+  app:
+    image: app
+    container_name: app_container
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8080:8080"
+    volumes:
+      - C:\JAVA_Lessons\JavaEE_Innopolis\II_JavaCoreMiddle\2.6_StreamAPI\src\main\resources/:/opt/app/II_JavaCoreMiddle/2.6_StreamAPI/src/main/resources
